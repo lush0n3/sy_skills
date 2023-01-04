@@ -1,6 +1,6 @@
-## sy_skills
+## SY_SKILLS
 
-- este script es una edicion de gamz-skillsystem ( post original https://github.com/gamziboi/gamz-skillsystem ).
+- Rework of Gamz-SkillSystem ( post original https://github.com/gamziboi/gamz-skillsystem ).
 
 ### [ DEPENDENCY ]
 
@@ -13,9 +13,38 @@
 - Acoplar SQL a la base de datos
 - ensure sy_skills despues de ox_lib
 
+### [ NEW ]
+
+- Add custom skills  
+Example to add new custom skill
+```lua
+    ['Miner'] = {
+        Current = 0,
+        RemoveAmount = 0,
+        gtaAbility = false,           -- Turn false for custom skill 
+        Stat = "Miner",
+        icon = 'fas fa-trowel',
+        info = 'Description',
+    },
+```
+
+- Add another menu for customs skills
+
+- Add WEapon check abiliti 
+Config preview
+```lua
+    Config.WeaponLvlCheck = true
+    
+    Config.WeaponLvL = {
+        ['WEAPON_PISTOL'] = {xp = 100 },
+        ['WEAPON_BAT'] = {xp = 5.0 },
+        ['WEAPON_ADVANCEDRIFLE'] = {xp = 30.0 },
+    }
+```
+
 ### [ DOC ]
 
-- Para actualizar una Skill
+- Update skill
 
 ```lua
     local amount = 50 --XP Ammount
@@ -23,13 +52,13 @@
     exports["sy_skills"]:UpdateSkill(skill, amount)
 ```
 
-- verificar una skill
+- CheckSkill 
 
 ```lua
     exports["sy_skills"]:CheckSkill(skill, val)
 ```
 
-- Ejemplo para verificar
+- CheckSkill  example
 
 ```lua
 exports["sy_skills"]:CheckSkill("Minero", 100, function(checkit)
@@ -41,14 +70,31 @@ exports["sy_skills"]:CheckSkill("Minero", 100, function(checkit)
 end)
 ```
 
-- Retornar skills
+- GetSkill
 
 ```lua
     exports["sy_skills"]:GetCurrentSkill(skill)
 ```
 
-### Previews
 
+
+
+### Menu previews 
+- Principal menu
+    <p align="center">
+        <img src="https://i.imgur.com/kkzDp0A.png"/>
+    </p>
+---
+- GTA Abilitis
+    <p align="center">
+       <img src="https://i.imgur.com/WSvCYzz.png"/>
+    </p>
+---
+- Custom Skills
 <p align="center">
-    <img src="https://i.imgur.com/eXhGrWA.png"/>
+<img src="https://i.imgur.com/ht26Duy.png"/>
 </p>
+
+
+    
+
