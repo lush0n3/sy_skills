@@ -30,6 +30,7 @@ Example to add new custom skill
 
 - Add another menu for customs skills
 
+- Add locales (es, en) 
 - Add WEapon check abiliti 
 Config preview
 ```lua
