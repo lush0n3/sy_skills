@@ -6,12 +6,12 @@ local function createSkillMenu()
     for k, v in pairs(Config.Skills) do
         if v.gtaAbility then 
             table.insert(gtaskills, {
-                title = k,
+                title = v.SkillLang,
                 icon = v.icon,
                 progress = v.Current + 0.01,
                 metadata = {
-                    { label = 'INFO ', value = v.info },
-                    { label = 'XP ', value = v.Current.. ' / 100 %' },
+                    { label = locale('info'), value = v.info },
+                    { label = locale('xp'), value = v.Current.. ' / 100 %' },
                 }
             })
             lib.registerContext({
@@ -22,12 +22,12 @@ local function createSkillMenu()
             })
         else
             table.insert(skills, {
-                title = k,
+                title = v.SkillLang,
                 icon = v.icon,
                 progress = v.Current + 0.01,
                 metadata = {
-                    { label = 'INFO ', value = v.info },
-                    { label = 'XP ', value = v.Current.. ' / 100 %' },
+                    { label = locale('info'), value = v.info },
+                    { label = locale('xp'), value = v.Current.. ' / 100 %' },
                 }
             })
             lib.registerContext({
@@ -46,16 +46,16 @@ local function createSkillMenu()
         title = locale('skills'),
         options = {
             {
-                title = 'Habilidades ',
-                description = 'Comprueba tus habilidades, conduccion, vuelo, stamina, fuerza etc...',
+                title = locale('gtaskills'),
+                description = locale('gtaskillsdesc'),
                 icon = 'person-circle-check',
                 onSelect = function()
                     lib.showContext('gtaskills_menu')
                 end
             },
             {
-                title = 'Habilidades personales',
-                description = 'Comprueba tus habilidades personales, la xp se adquiere con su correspondencia',
+                title = locale('customskills'),
+                description = locale('customskillsdesc'),
                 icon = 'person-digging',
                 onSelect = function()
                     lib.showContext('skills_menu')

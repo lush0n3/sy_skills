@@ -1,122 +1,126 @@
 Config = {}
 
 Config.UpdateFrequency = 300
-
 Config.ResetSkillsDeath = false
-
 Config.Notifications = true
-
 Config.NotifyType = 'ox' -- OX or ESX
-
-Config.ResetSkillsDeath = false 
-
 Config.Debug = false
-
-Config.Skillmenu = "skills"
-
-Config.SkillMenuTitle = 'Menu skills'
+Config.Skillmenu = "skills" --Comand
 
 Config.Skills = {
         ['Stamina'] = {
-            Current = 0,
+            SkillLang = 'Stamina',
             gtaAbility = true,
+            Current = 0,
             RemoveAmount = 0,
             Stat = "MP0_STAMINA",
             icon = 'fas fa-walking',
             info = 'Description',
         },
-        ['Fuerza'] = {
-            Current = 0,
+        ['Strength'] = {
+            SkillLang = 'Fuerza',
             gtaAbility = true,
+            Current = 0,
             RemoveAmount = 0,
             Stat = "MP0_STRENGTH",
             icon = 'fas fa-dumbbell',
             info = 'Description',
         },
-        ['Capacidad pulmonar'] = {
-            Current = 0,
+        ['Lung capacity'] = {
+            SkillLang = 'Capacidad pulmonar',
             gtaAbility = true,
+            Current = 0,
             RemoveAmount = 0,
             Stat = "MP0_LUNG_CAPACITY",
             icon = 'fas fa-heartbeat',
             info = 'Description',
         },
-        ['Tiro'] = {
-            Current = 0,
+        ['Shooting'] = {
+            SkillLang = 'Tiro',
             gtaAbility = true,
+            Current = 0,
             RemoveAmount = 0,
             Stat = "MP0_SHOOTING_ABILITY",
             icon = 'fas fa-bullseye',
             info = 'Description ',
         },
-        ['Conduciendo'] = {
-            Current = 0,
+        ['Driving'] = {
+            SkillLang = 'Conduccion',
             gtaAbility = true,
+            Current = 0,
             RemoveAmount = 0,
             Stat = "MP0_DRIVING_ABILITY",
             icon = 'fas fa-car-side',
             info = 'Description',
         },
         ['Wheelie'] = {
-            Current = 0,
+            SkillLang = 'Wheelie',
             gtaAbility = true,
+            Current = 0,
             RemoveAmount = 0,
             Stat = "MP0_WHEELIE_ABILITY",
             icon = 'fas fa-motorcycle',
             info = 'Description ',
         },
-        ['Vuelo'] = {
-            Current = 0,
+        ['Flight'] = {
+            SkillLang = 'Vuelo',
             gtaAbility = true,
+            Current = 0,
             RemoveAmount = 0,
             Stat = "MP0_FLYING_ABILITY",
             icon = 'fas fa-plane',
             info = 'Description ',
         },
         ['Ilegal'] = {
-            Current = 0,
+            SkillLang = 'Ilegal',
             gtaAbility = false,
+            Current = 0,
             RemoveAmount = 0,
             Stat = "ILEGAL",
             icon = 'fas fa-scale-unbalanced-flip',
             info = 'Description ',
         },
-        ['Cocina'] = {
-            Current = 0,
+        ['Cook'] = {
+            SkillLang = 'Cocina',
             gtaAbility = false,
+            Current = 0,
             RemoveAmount = 0,
             Stat = "COOK",
             icon = 'fas fa-kitchen-set',
             info = 'Description ',
         },
         ['Agricultura'] = {
-            Current = 0,
+            SkillLang = 'Agricultura',
             gtaAbility = false,
+            Current = 0,
             RemoveAmount = 0,
             Stat = "Agro",
             icon = 'fas fa-wheat-awn-circle-exclamation',
             info = 'Description ',
         },
-        ['Mineria'] = {
-            Current = 0,
+        ['Mining'] = {
+            SkillLang = 'Mineria',
             gtaAbility = false,
+            Current = 0,
             RemoveAmount = 0,
             Stat = "Minero",
             icon = 'fas fa-trowel',
             info = 'Description ',
         },
-        ['Manitas'] = {
-            Current = 0,
+        ['Handyman'] = {
+            SkillLang = 'Manitas',
             gtaAbility = false,
+            Current = 0,
             RemoveAmount = 0,
-            Stat = "Carpi",
+            Stat = "handyman",
             icon = 'fas fa-hammer',
             info = 'Description ',
         },
 }
 
-Config.WeaponLvlCheck = true
 
+Config.WeaponLvlCheck = true
+Config.CheckWeaponSkill = 'Shooting'
 Config.WeaponLvL = {
     ['WEAPON_PISTOL'] = {xp = 10.0 },
     ['WEAPON_BAT'] = {xp = 5.0 },

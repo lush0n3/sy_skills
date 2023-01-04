@@ -1,6 +1,18 @@
 {
-    "skills":"Abilities",
-    "loco":"test"
-    
+    "skills":"Habilidades",
+    "info":"INFO ",
+    "xp":"XP ",
+    "loco":"test",
+    "gtaskills":"Habilidades",
+    "gtaskillsdesc":"Comprueba tus habilidades, conduccion, vuelo, stamina, fuerza etc...",
+    "customskills":"Habilidades personales",
+    "customskillsdesc":"Comprueba tus habilidades personales, la xp se adquiere con su correspondencia",
 
-  }
+
+    "weaponcheck1":"No puedes usar esta arma, tienes que tener una EXP de ",
+    "weaponcheck2":" en tu habilidad de ",
+
+    "rewardtitle":"Puntos de Experiencia ganados!",
+    "rewardDesc":" XP para "
+    
+}

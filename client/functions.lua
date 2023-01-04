@@ -40,8 +40,8 @@ UpdateSkill = function(skill, amount)
     if Config.Notifications and  tonumber(amount) > 0 then
         if Config.NotifyType == 'ox' then
             lib.notify({
-                title = 'Puntos de Experiencia ganados!',  
-                description = "+" .. amount .. " XP para " .. skill,
+                title = locale('rewardtitle'),  
+                description = "+" .. amount .. locale('rewardDesc') .. skill,
                 position = 'bottom',
                 style = {
                     backgroundColor = '#141517',
@@ -51,7 +51,7 @@ UpdateSkill = function(skill, amount)
                 iconColor = '#C53030'
             })
         elseif Config.NotifyType == "esx" then
-            ESX.ShowNotification("SKILL GAINED + " .. amount .. " XP para " .. skill) 
+            ESX.ShowNotification(locale('rewardtitle') .. amount .. locale('rewardDesc') .. skill) 
         end
     end
 

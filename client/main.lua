@@ -68,14 +68,14 @@ Citizen.CreateThread(function()
 				local ped = PlayerPedId()
 				local weaponHash = k
 				local weapon = HasPedGotWeapon(ped, weaponHash, false)
-				local skill = "Tiro"
+				local skill = Config.CheckWeaponSkill
 				CheckSkill(skill, v.xp, function(checkit)
 					if checkit then
 					else
 						if weapon then 
 							lib.notify({
 								title = locale('skills'),  
-								description = 'No puedes usar esta arma, tienes que tener una EXP de '..v.xp..' en tu habilidad de '..skill,
+								description = locale('weaponcheck1')..v.xp..locale('weaponcheck2')..skill,
 								position = 'bottom',
 								style = {
 									backgroundColor = '#141517',
